@@ -137,8 +137,8 @@ from sklearn.model_selection import train_test_split
 # Select relevant columns
 data_selected = df[["ts","device", "humidity"]]
 
-seuil_max = 75.0  # set maximum acceptable humidity
-seuil_min = 45.0  # set the maximum acceptable humidity
+seuil_max = ""  # set maximum acceptable humidity
+seuil_min = ""  # set the maximum acceptable humidity
 
 # Add an "anomaly" column for humidity outside the range
 data_selected['anomaly'] = data_selected['humidity'].apply(lambda x: 0 if x < seuil_min or x > seuil_max else 1)
